@@ -1,0 +1,44 @@
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item{
+    margin: 10px;
+    width: 200px;
+    height: 50px;
+}
+
+.grid {
+    /* border: 2px => 2*6 (6 sides horizontally/vertically) = 12px = 600 + 12 = 612px */
+    width: 612px;
+    height: 606px;
+    margin: auto;
+    /* to put square into grid */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square{
+    height: 200px;
+    width: 200px;
+    border: 2px solid rgb(81, 55, 33);
+    background-image: url('block.png');
+    background-size: cover;
+}
+
+.mole {
+    background-image: url("mole_block.png");
+    background-size: cover;
+}
+/* 
+#timeDiv{
+    display: block;
+    text-align: right;
+}
+
+#scoreDiv{
+    display: block;
+    text-align: left;
+
+} */
