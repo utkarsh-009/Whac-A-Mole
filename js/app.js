@@ -3,7 +3,7 @@ const mole = document.querySelectorAll('.mole');
 const timeLeft = document.querySelectorAll('#time-left');
 const score = document.querySelectorAll('#score');
 
-let curr_time = 10;
+let curr_time = 30;
 let result = 0;
 let hitPosition;
 let timerId = null;
@@ -44,7 +44,10 @@ function moveMole(){
     timerId = setInterval(randomSquareForMole, 500);
 }
 
+// calling the countDown function for every 1000 millisec => 1sec
+let countDownTimer = setInterval(countDown, 1000)
 
+// updates time and score after every second
 function countDown(){
     
     curr_time--;
@@ -54,17 +57,15 @@ function countDown(){
         
         alert("GAME OVER, YOUR SCORE IS " + result)
         
-        curr_time = 60;
+        // Restarting game
+        curr_time = 30;
         result = 0;
+        countDownTimer = setInterval(countDown, 1000)
 
         document.getElementById("score").textContent = "Your Score: "+ result;
         document.getElementById("time").textContent = "Time Left: " + curr_time;
         moveMole()
-        
     }
+
     document.getElementById("time").textContent = "Time Left: " + curr_time;
-    
-
 }
-
-let countDownTimer = setInterval(countDown, 1000)

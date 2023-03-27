@@ -1,12 +1,28 @@
+body{
+    height: 700px;
+    margin: 0px;
+    padding: 0px;
+    background-image: url('/images/bg.png');
+    font-family: 'DotGothic16', sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
 .scoreboard {
     display: flex;
     justify-content: space-between;
 }
 
 .item{
-    margin: 10px;
+    margin: 5px;
     width: 200px;
     height: 50px;
+    color: white;
 }
 
 .grid {
@@ -17,6 +33,7 @@
     /* to put square into grid */
     display: flex;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 
 .square{
