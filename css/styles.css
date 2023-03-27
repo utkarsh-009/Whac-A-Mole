@@ -23,12 +23,12 @@
     height: 200px;
     width: 200px;
     border: 2px solid rgb(81, 55, 33);
-    background-image: url('block.png');
+    background-image: url('/images/block.png');
     background-size: cover;
 }
 
 .mole {
-    background-image: url("mole_block.png");
+    background-image: url("/images/mole_block.png");
     background-size: cover;
 }
 /* 
