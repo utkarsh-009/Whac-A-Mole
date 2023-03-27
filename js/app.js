@@ -51,7 +51,11 @@ let countDownTimer = setInterval(countDown, 1000)
 function countDown(){
     
     curr_time--;
-    if(curr_time == 0){
+    document.getElementById("time").textContent = "Time Left: " + curr_time;
+    
+    if(curr_time == -1) // time completes 0th second
+    {
+        
         clearInterval(countDownTimer)
         clearInterval(timerId)
         
@@ -61,11 +65,10 @@ function countDown(){
         curr_time = 30;
         result = 0;
         countDownTimer = setInterval(countDown, 1000)
-
+        
         document.getElementById("score").textContent = "Your Score: "+ result;
         document.getElementById("time").textContent = "Time Left: " + curr_time;
         moveMole()
     }
 
-    document.getElementById("time").textContent = "Time Left: " + curr_time;
 }
